@@ -59,7 +59,32 @@ void test1() {
 }
 
 void test2() {
-
+std::cout << "\nTest2=======================" << std::endl;
+	std::map<std::string, std::set<int>> grades{
+		{"Jenny", {100,99}},
+		{"Elizabeth",{98,99}},
+		{"Gabriel", {88,100}}
+	};
+	display(grades);
+	grades["Jennifer"].insert(96);
+	grades["Jenny"].insert(96);
+	display(grades);
+	auto it = grades.find("Jenny");
+	if (it != grades.end()) {
+		it->second.insert(333);
+	}
+	display(grades);
+	it = grades.find("Jennifer");
+	if (it != grades.end()) {
+		it->second.insert(333);
+	}
+	display(grades);
+	if (it != grades.end()) {
+		it->second.insert(111);
+	}
+	display(grades);
+	grades.clear();
+	display(grades);
 }
 
 int main()
