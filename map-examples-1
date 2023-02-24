@@ -16,6 +16,17 @@ void display_map(const std::map<std::string, std::set<int>>& m ) {
 	std::cout << "]" << std::endl;
 }
 
+void display_map(const std::map<std::string, std::set<double>>& m) {
+	std::cout << "[ ";
+	for (const auto& elem : m) {
+		std::cout << elem.first << ": ["; //outer loop for they key value pair which is the string
+		for (const auto& set_elem : elem.second)
+			std::cout << set_elem << ", ";
+		std::cout << "] ";
+	}
+	std::cout << "]" << std::endl;
+}
+
 int main() {
 
 
