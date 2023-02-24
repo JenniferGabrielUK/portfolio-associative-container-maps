@@ -30,9 +30,14 @@ void display_map(const std::map<std::string, std::set<double>>& m) {
 int main() {
 std::cout << std::setw(30) << std::left << std::setfill('-') << "\n" << std::endl;
 	std::map<std::string, std::set <double>> track_times{
-	{"Jenny", { 11.5, 10.9, 12.8, 15.1 }}
+	std::map<std::string, std::set <double>> track_times{
+		{"Jenny", { 11.5, 10.9, 12.8, 15.1 }},
+		{"Elizabeth", {12.4, 18.5, 13.7 }},
+		{"Gabriel", {12,13.3}},
+		{"Gandalf", {1.1,1.2,1.3}}
 	};
-
+	track_times.emplace("Jennfer", std::set <double> {1.1});
+	display_map(track_times);
 
 return 0;
 }
