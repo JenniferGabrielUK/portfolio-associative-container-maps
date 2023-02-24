@@ -28,7 +28,10 @@ void display_map(const std::map<std::string, std::set<double>>& m) {
 }
 
 int main() {
-
+std::cout << std::setw(30) << std::left << std::setfill('-') << "\n" << std::endl;
+	std::map<std::string, std::set <double>> track_times{
+	{"Jenny", { 11.5, 10.9, 12.8, 15.1 }}
+	};
 
 
 return 0;
