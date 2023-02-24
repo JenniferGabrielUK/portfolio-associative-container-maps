@@ -47,6 +47,10 @@ std::cout << std::setw(30) << std::left << std::setfill('-') << "\n" << std::end
 		it->second.insert(3.333);
 	}
 	display_map(track_times);
-
+	it = track_times.find("Gandalf");
+	if (it != track_times.end()) {
+		it->second.clear();
+		}
+	display_map(track_times);
 return 0;
 }
